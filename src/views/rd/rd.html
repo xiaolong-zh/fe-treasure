@@ -1,0 +1,51 @@
+<div class="rd">
+    <el-card class="box-card">
+        <div slot="header" class="search_box">
+            <el-form :inline="true" class="search_form">
+                <el-form-item>
+                    <el-input  placeholder="环境名称"></el-input>
+                </el-form-item>
+            </el-form>
+        </div>
+        <div class="container">
+            <el-table :data="tableData" stripe style="width: 100%;">
+                <el-table-column prop="tel" label="环境名称"></el-table-column>
+                <el-table-column prop="student_id" label="地址"></el-table-column>
+                <el-table-column prop="student_name" label="端口"></el-table-column>
+            </el-table>
+            <!-- <div class="pagination_box">
+                <el-pagination :page-sizes="[10,20,30,50,100]" :page-size="pagination.pageSize"
+                    layout="total, sizes, prev, pager, next, jumper" :total="pagination.total"
+                    @current-change="handleCurrentChange" :current-page="pagination.page"
+                    @size-change="handleSizeChange"></el-pagination>
+            </div> -->
+        </div>
+    </el-card>
+
+    <!-- <el-dialog :visible.sync="dialogData.dialogVisible" width="800px" class="dialog-tips" height="400px">
+        <div slot="title" class="dialog-title">
+            <div class="user-count mr24">
+                用户账号：<span class="dialog-title-color">{{dialogData.dialogInfo.tel}}</span>
+            </div>
+            <div class="user-name mr24">
+                学员名称：<span class="dialog-title-color">{{dialogData.dialogInfo.student_name}}</span>
+            </div>
+            <div class="works-type">
+                作品类型：<span class="dialog-title-color">{{typeMap[dialogData.dialogInfo.type]}}</span>
+            </div>
+        </div>
+        <div class="dialog-container">
+            <span>{{dialogData.dialogInfo.type == 1 ? '书籍名称：'+dialogData.dialogInfo.book_name : '美文名称：'+ dialogData.dialogInfo.works_name}}</span>
+            <span v-if="dialogData.dialogInfo.type == 2"
+                class="display-block mt8">{{'作品详情：'+dialogData.dialogInfo.bea_article_name}}</span>
+            <span class="display-block mt8">留言:</span>
+            <p>{{dialogData.dialogInfo.content}}
+                <img :src="dialogData.dialogInfo.img_url" width="100%" height="100%">
+            </p>
+        </div>
+        <div slot="footer" class="dialog-footer">
+            <el-button @click="dialogData.dialogVisible = false">取 消</el-button>
+            <el-button type="primary" @click="dialogData.dialogVisible = false">确 定</el-button>
+        </div>
+    </el-dialog> -->
+</div>
