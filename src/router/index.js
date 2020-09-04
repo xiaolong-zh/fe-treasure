@@ -1,17 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/home/home.vue'
-// import test from '../views/layout/test.vue';
 Vue.use(VueRouter)
 const routes = [{
   path: '/',
   name: 'Home',
   component: Home,
-  children:[{
-    path:'/test',
-    name:test,
-    // component:test,
-  }]
+  children:[]
 }]
 
 const router = new VueRouter({
